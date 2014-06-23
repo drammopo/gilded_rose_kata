@@ -2,7 +2,7 @@
 
 require "minitest/autorun"
 require "minitest/reporters"
-MiniTest::Reporters.use! MiniTest::Reporters::SpecReporter.new
+MiniTest::Reporters.use! MiniTest::Reporters::DefaultReporter.new
  
 require_relative './gilded_rose'
  
