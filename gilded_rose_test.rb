@@ -1,8 +1,8 @@
-#gem 'minitest', '~> 4.7'
+gem 'minitest'
 
 require "minitest/autorun"
 require "minitest/reporters"
-MiniTest::Reporters.use! MiniTest::Reporters::DefaultReporter.new
+MiniTest::Reporters.use! Minitest::Reporters::DefaultReporter.new
  
 require_relative './gilded_rose'
  
