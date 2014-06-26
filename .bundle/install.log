@@ -1,0 +1,26 @@
+# Logfile created on 2014-06-26 23:57:26 +0200 by logger.rb/36483
+I, [2014-06-26T23:57:26.644916 #22565]  INFO -- : 0:  diff-lcs (1.2.5) from /opt/boxen/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/specifications/diff-lcs-1.2.5.gemspec
+I, [2014-06-26T23:57:31.981691 #22565]  INFO -- : 0:  sorcerer (1.0.2) from /opt/boxen/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/specifications/sorcerer-1.0.2.gemspec
+I, [2014-06-26T23:57:36.454877 #22565]  INFO -- : 0:  given_core (3.5.4) from /opt/boxen/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/specifications/given_core-3.5.4.gemspec
+I, [2014-06-26T23:57:41.325641 #22565]  INFO -- : 0:  rspec-support (3.0.2) from /opt/boxen/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/specifications/rspec-support-3.0.2.gemspec
+I, [2014-06-26T23:57:45.909861 #22565]  INFO -- : 0:  rspec-core (3.0.2) from /opt/boxen/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/specifications/rspec-core-3.0.2.gemspec
+I, [2014-06-26T23:57:50.150480 #22565]  INFO -- : 0:  rspec-expectations (3.0.2) from /opt/boxen/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/specifications/rspec-expectations-3.0.2.gemspec
+I, [2014-06-26T23:57:55.667308 #22565]  INFO -- : 0:  rspec-mocks (3.0.2) from /opt/boxen/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/specifications/rspec-mocks-3.0.2.gemspec
+I, [2014-06-26T23:58:00.697985 #22565]  INFO -- : 0:  rspec (3.0.0) from /opt/boxen/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/specifications/rspec-3.0.0.gemspec
+I, [2014-06-26T23:58:04.949478 #22565]  INFO -- : 0:  rspec-given (3.5.4) from /opt/boxen/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/specifications/rspec-given-3.5.4.gemspec
+I, [2014-06-26T23:58:04.950536 #22565]  INFO -- : 0:  bundler (1.5.0) from /opt/boxen/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/specifications/bundler-1.5.0.gemspec
+I, [2014-06-26T23:58:34.542671 #22683]  INFO -- : 0:  ansi (1.4.3) from /opt/boxen/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/specifications/ansi-1.4.3.gemspec
+I, [2014-06-26T23:58:34.543570 #22683]  INFO -- : 0:  builder (3.2.2) from /opt/boxen/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/specifications/builder-3.2.2.gemspec
+I, [2014-06-26T23:58:34.544244 #22683]  INFO -- : 0:  diff-lcs (1.2.5) from /opt/boxen/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/specifications/diff-lcs-1.2.5.gemspec
+I, [2014-06-26T23:58:34.544867 #22683]  INFO -- : 0:  sorcerer (1.0.2) from /opt/boxen/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/specifications/sorcerer-1.0.2.gemspec
+I, [2014-06-26T23:58:34.545721 #22683]  INFO -- : 0:  given_core (3.5.4) from /opt/boxen/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/specifications/given_core-3.5.4.gemspec
+I, [2014-06-26T23:58:38.438723 #22683]  INFO -- : 0:  minitest (5.3.5) from /opt/boxen/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/specifications/minitest-5.3.5.gemspec
+I, [2014-06-26T23:58:42.541678 #22683]  INFO -- : 0:  ruby-progressbar (1.5.1) from /opt/boxen/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/specifications/ruby-progressbar-1.5.1.gemspec
+I, [2014-06-26T23:58:48.633531 #22683]  INFO -- : 0:  minitest-reporters (1.0.4) from /opt/boxen/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/specifications/minitest-reporters-1.0.4.gemspec
+I, [2014-06-26T23:58:48.634431 #22683]  INFO -- : 0:  rspec-support (3.0.2) from /opt/boxen/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/specifications/rspec-support-3.0.2.gemspec
+I, [2014-06-26T23:58:48.635188 #22683]  INFO -- : 0:  rspec-core (3.0.2) from /opt/boxen/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/specifications/rspec-core-3.0.2.gemspec
+I, [2014-06-26T23:58:48.635888 #22683]  INFO -- : 0:  rspec-expectations (3.0.2) from /opt/boxen/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/specifications/rspec-expectations-3.0.2.gemspec
+I, [2014-06-26T23:58:48.636893 #22683]  INFO -- : 0:  rspec-mocks (3.0.2) from /opt/boxen/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/specifications/rspec-mocks-3.0.2.gemspec
+I, [2014-06-26T23:58:48.637573 #22683]  INFO -- : 0:  rspec (3.0.0) from /opt/boxen/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/specifications/rspec-3.0.0.gemspec
+I, [2014-06-26T23:58:48.638202 #22683]  INFO -- : 0:  rspec-given (3.5.4) from /opt/boxen/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/specifications/rspec-given-3.5.4.gemspec
+I, [2014-06-26T23:58:48.638800 #22683]  INFO -- : 0:  bundler (1.5.0) from /opt/boxen/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/specifications/bundler-1.5.0.gemspec
