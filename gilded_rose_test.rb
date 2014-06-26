@@ -9,38 +9,37 @@ require_relative './gilded_rose'
 
 class GildedRoseTest < MiniTest::Unit::TestCase
 
-  # def update_quality_for_item_with(sell_in,
-  #                                  quality,
-  #                                  name             = 'normal item',
-  #                                  sell_in_decrease = 1)
-
-  #   item = Item.new(name, sell_in, quality)
-  #   update_quality([item])
-  #   assert_equal item.sell_in, sell_in - sell_in_decrease
-  #   item
-  # end
-
   def test_normal_item_before_sell_date
     item = GildedRose.new('normal', 10, 5)
     item.tick
+
     assert_equal 9, item.quality
     assert_equal 4, item.days_remaining
   end
 
-  # def test_normal_item_on_sell_date
-  #   item = update_quality_for_item_with(0, 10, 'normal')
-  #   assert_equal 8, item.quality
-  # end
+  def test_normal_item_on_sell_date
+    item = GildedRose.new('normal', 10, 0)
+    item.tick
 
-  # def test_normal_item_after_sell_date
-  #   item = update_quality_for_item_with(-10, 10, 'normal')
-  #   assert_equal 8, item.quality
-  # end
+    assert_equal 8, item.quality
+    assert_equal -1, item.days_remaining
+  end
 
-  # def test_normal_item_of_zero_quality
-  #   item = update_quality_for_item_with(5, 0, 'normal')
-  #   assert_equal 0, item.quality
-  # end
+  def test_normal_item_after_sell_date
+    item = GildedRose.new('normal', 10, -10)
+    item.tick
+
+    assert_equal 8, item.quality
+    assert_equal -11, item.days_remaining
+  end
+
+  def test_normal_item_of_zero_quality
+    item = GildedRose.new('normal', 0, 5)
+    item.tick
+
+    assert_equal 0, item.quality
+    assert_equal 4, item.days_remaining
+  end
 
   # def test_brie_before_sell_date
   #   item = update_quality_for_item_with(5, 10, 'Aged Brie')
