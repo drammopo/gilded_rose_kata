@@ -97,20 +97,29 @@ class GildedRoseTest < MiniTest::Unit::TestCase
     assert_equal -11, item.days_remaining
   end
 
-  # def test_sulfuras_before_sell_date
-  #   item = update_quality_for_item_with(5, 80, 'Sulfuras, Hand of Ragnaros', 0)
-  #   assert_equal 80, item.quality
-  # end
+  def test_sulfuras_before_sell_date
+    item = GildedRose.new('Sulfuras, Hand of Ragnaros', 80, 5)
+    item.tick
 
-  # def test_sulfuras_on_sell_date
-  #   item = update_quality_for_item_with(0, 80, 'Sulfuras, Hand of Ragnaros', 0)
-  #   assert_equal 80, item.quality
-  # end
+    assert_equal 80, item.quality
+    assert_equal 5, item.days_remaining
+  end
 
-  # def test_sulfuras_after_sell_date
-  #   item = update_quality_for_item_with(-10, 80, 'Sulfuras, Hand of Ragnaros', 0)
-  #   assert_equal 80, item.quality
-  # end
+  def test_sulfuras_on_sell_date
+    item = GildedRose.new('Sulfuras, Hand of Ragnaros', 80, 0)
+    item.tick
+
+    assert_equal 80, item.quality
+    assert_equal 0, item.days_remaining
+  end
+
+  def test_sulfuras_after_sell_date
+    item = GildedRose.new('Sulfuras, Hand of Ragnaros', 80, -10)
+    item.tick
+
+    assert_equal 80, item.quality
+    assert_equal -10, item.days_remaining
+  end
 
   # def test_backstage_pass_long_before_sell_date
   #   item = update_quality_for_item_with(11, 10, 'Backstage passes to a TAFKAL80ETC concert')
