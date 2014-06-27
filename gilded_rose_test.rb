@@ -209,45 +209,73 @@ class GildedRoseTest < MiniTest::Unit::TestCase
     assert_equal -11, item.days_remaining
   end
 
-  # def test_conjured_item_before_sell_date
-  #   item = update_quality_for_item_with(5, 10, 'Conjured Mana Cake')
-  #   assert_equal 8, item.quality
-  # end
+  def test_conjured_item_before_sell_date
+    item = GildedRose.new('Conjured Mana Cake', 10, 5)
+    item.tick
 
-  # def test_conjured_item_at_zero_quality
-  #   item = update_quality_for_item_with(5, 0, 'Conjured Mana Cake')
-  #   assert_equal 0, item.quality
-  # end
+    assert_equal 8, item.quality
+    # assert_equal -11, item.days_remaining
+  end
 
-  # def test_conjured_item_on_sell_date
-  #   item = update_quality_for_item_with(0, 10, 'Conjured Mana Cake')
-  #   assert_equal 6, item.quality
-  # end
+  def test_conjured_item_at_zero_quality
+    item = GildedRose.new('Conjured Mana Cake', 0, 5)
+    item.tick
 
-  # def test_conjured_item_on_sell_date_at_zero_quality
-  #   item = update_quality_for_item_with(0, 0, 'Conjured Mana Cake')
-  #   assert_equal 0, item.quality
-  # end
+    assert_equal 0, item.quality
+    # assert_equal -11, item.days_remaining
+  end
 
-  # def test_conjured_item_after_sell_date
-  #   item = update_quality_for_item_with(-10, 10, 'Conjured Mana Cake')
-  #   assert_equal 6, item.quality
-  # end
+  def test_conjured_item_on_sell_date
+    item = GildedRose.new('Conjured Mana Cake', 10, 0)
+    item.tick
 
-  # def test_conjured_item_after_sell_date_at_zero_quality
-  #   item = update_quality_for_item_with(-10, 0, 'Conjured Mana Cake')
-  #   assert_equal 0, item.quality
-  # end
+    assert_equal 6, item.quality
+    # assert_equal -11, item.days_remaining
+  end
 
-  # def test_several_items
-  #   items = [Item.new("normal item", 5, 10),
-  #            Item.new("Aged Brie", 3, 10)]
+  def test_conjured_item_on_sell_date_at_zero_quality
+    item = GildedRose.new('Conjured Mana Cake', 0, 0)
+    item.tick
 
-  #   update_quality(items)
-  #   assert_equal  9, items[0].quality
-  #   assert_equal  4, items[0].sell_in
-  #   assert_equal 11, items[1].quality
-  #   assert_equal  2, items[1].sell_in
-  # end
+    assert_equal 0, item.quality
+    assert_equal 0, item.days_remaining
+  end
+
+  def test_conjured_item_after_sell_date
+    item = GildedRose.new('Conjured Mana Cake', 10, 10)
+    item.tick
+
+    assert_equal 6, item.quality
+    # assert_equal 0, item.days_remaining
+  end
+
+  def test_conjured_item_after_sell_date_at_zero_quality
+    item = GildedRose.new('Conjured Mana Cake', 0, -10)
+    item.tick
+
+    assert_equal 0, item.quality
+    # assert_equal 0, item.days_remaining
+  end
+
+  def test_several_items
+    # items = [Item.new("normal item", 5, 10),
+    #          Item.new("Aged Brie", 3, 10)]
+
+    # update_quality(items)
+    # assert_equal  9, items[0].quality
+    # assert_equal  4, items[0].sell_in
+    # assert_equal 11, items[1].quality
+    # assert_equal  2, items[1].sell_in
+
+    items = [GildedRose.new('normal', 10, 5),
+             GildedRose.new('Aged Brie', 10, 3)]
+    items[0].tick
+    items[1].tick
+
+    assert_equal  9, items[0].quality
+    assert_equal  4, items[0].days_remaining
+    assert_equal 11, items[1].quality
+    assert_equal  2, items[1].days_remaining
+  end
 
 end
