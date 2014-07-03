@@ -50,10 +50,20 @@ class GildedRose
       end
     end
 
-    if name == 'normal'
-    return normal_tick
+    case name
+    when 'normal'
+        return normal_tick
+    when 'Aged Brie'
+      return brie_tick
     end
+  end
 
+  def brie_tick
+      @days_remaining -= 1
+      return if @quality >= 50
+
+      @quality += 1
+      @quality += 1 if @days_remaining <= 0
   end
 
   def normal_tick
