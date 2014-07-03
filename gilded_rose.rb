@@ -1,5 +1,5 @@
 class GildedRose
-  attr_reader :quality, :days_remaining
+  attr_reader :name, :quality, :days_remaining
 
   def initialize(name, quality, days_remaining)
     @name, @quality, @days_remaining = name, quality, days_remaining
@@ -49,5 +49,15 @@ class GildedRose
         end
       end
     end
+
+    if name == 'normal'
+    return normal_tick
+    end
+
+  end
+
+  def normal_tick
+    @quality -= 1
+    @days_remaining -=1
   end
 end
