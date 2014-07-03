@@ -7,7 +7,7 @@ MiniTest::Reporters.use! Minitest::Reporters::DefaultReporter.new
 require_relative './gilded_rose'
 
 
-class GildedRoseTest < MiniTest::Unit::TestCase
+class GildedRoseTest < MiniTest::Test
 
   def test_normal_item_before_sell_date
     item = GildedRose.new('normal', 10, 5)
